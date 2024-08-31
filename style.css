@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  overflow: hidden;
+  background-image: url('a.jpg'); /* 背景画像のパス */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.main-image {
+  position: relative;
+  display: inline-block;
+}
+
+.main-image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh; /* スマホでの見切れを防ぐために高さを調整 */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* 影の設定 */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 0 10px; /* コンテンツに余白を追加してスマホ対応 */
+  max-width: 90vw; /* スマホ画面の幅に対応 */
+  opacity: 0; /* 初期状態で非表示に */
+}
+
+h1 {
+  font-size: 2.5em; /* スマホでも見切れないようにサイズ調整 */
+  margin: 0;
+  font-family: 'Garamond', serif;
+}
+
+p {
+  font-size: 1.2em; /* スマホでも見やすいサイズに調整 */
+  margin-top: 10px;
+  font-family: 'Georgia', serif;
+}
